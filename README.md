@@ -10,21 +10,21 @@ As usual, just include the script right after jQuery.
 
 ## Usage
 
-Use it on jQuery selector.
+Use a jQuery selector as the subject.
 
 	$(selector).readtime(options)
-
-You can also use it on plain string.
-
-	$.readtime(string, options)
-
+	
 Examples:
 
 	$('#article').readtime({
 		placeholder: '#readtime'
 	});
 
-As for a plain string.
+You can also passing a plain string.
+
+	$.readtime(string, options)
+
+Examples:
 
 	$.readtime('Hello World', {
 		placeholder: '#readtime'
@@ -32,13 +32,13 @@ As for a plain string.
 
 ## Options
 
-+ **wpm**: _number_ - Words per Minute (default: 200)
-+ **output**: _string_ - Output format (default: "%0rth:%0rtm:%0rts (%rtw)"). See **Type Specifier** section.
-+ **placeholder**: _string_ or _jQuery object_ - A placeholder for output
++ **wpm**: _number_ - Words per Minute (default: 180)
++ **output**: _string_ or _function_ - Output format (default: "%0rth:%0rtm:%0rts (%rtw)"). See **Type Specifier** and **Custom Output** section.
++ **placeholder**: _string_ or _jQuery object_ - A selector of placeholder for output
 
 ## Type Specifier
 
-You can customise the output format using type specifier.
+The output can be formatted using type specifier.
 
 + %rth - Hour
 + %rtm - Minutes
@@ -51,13 +51,24 @@ You can customise the output format using type specifier.
 Example:
 
 	$('#article').readtime({
+		placeholder: '#readtime',
 		output: '%rth hr %rtm min %rts sec (%rtw)'
-		placeholder: '#readtime'
 	});
 
 Result:
 
 	1 hr 5 min 10 sec
+	
+## Custom Output
+
+You can freely customise the output by passing a function to `output` option.
+
+	$('#article').readtime({
+		placeholder: '#readtime',
+		output: function(hour, minute, second, words) {
+			...
+		}
+	})
 
 ## License
 
