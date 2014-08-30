@@ -1,0 +1,30 @@
+{
+	"name": "jquery.readtime",
+	"version": "1.0.0",
+	"main": "src/jquery.readtime.js",
+	"dependencies": {
+    	"jquery": ">=1.0.4"
+  	},
+	"authors": [
+		{ "name": "Firman Wandayandi", "email": "<me@firmanw.com>", "homepage": "http://firmanw.com"}
+	],
+	"description": "A jQuery plugin to estimated the reading time",
+	"keywords": [
+		"readtime",
+		"reading",
+		"estimated"
+	],
+	"license": "MIT",
+	"homepage": "http://firmanw.com/jquery.readtime",
+	"ignore": [
+		".*",
+		"node_modules",
+		"Gruntfile.js",
+    	"*.json",
+    	"*.codekit",
+    	".codekit-cache",
+    	".md",
+    	"test",
+    	"demo"
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"name": "jquery.readtime",
+	"version": "1.0.0",
+	"description": "A jQuery plugin to estimated the reading time",
+	"keywords": [
+		"readtime",
+		"reading",
+		"estimated"
+	],
+	"homepage": "http://firmanw.com/jquery.readtime",
+	"author": {
+		"name": "Firman Wandayandi",
+		"email": "me@firmanw.com",
+		"web": "http://firmanw.com",
+		"twitter": "firmanw"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/firmanw/jquery.readtime.git"
+	},
+	"license": "MIT",
+	"readmeFilename": "README.md",
+	"devDependencies": {
+		"grunt": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-qunit": "*",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-watch": "*"
+	}
+}
